@@ -152,7 +152,6 @@ const CATEGORIAS: { kind: ProductKind; titulo: string; resumo: string }[] = [
   { kind: "suco", titulo: "🥤 *SUCOS*", resumo: "Sucos" },
   { kind: "porcao", titulo: "🍟 *PORÇÕES*", resumo: "Porções" },
   { kind: "salgado", titulo: "🥟 *SALGADOS*", resumo: "Salgados" },
-  { kind: "espetinho", titulo: "🍢 *ESPETINHOS*", resumo: "Espetinhos" },
   { kind: "bebida", titulo: "🍻 *BEBIDAS*", resumo: "Bebidas" },
 ];
 

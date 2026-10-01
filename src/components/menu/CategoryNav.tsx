@@ -13,7 +13,6 @@ const CATEGORIES: Category[] = [
   { id: "sucos", label: "Sucos Naturais", emoji: "🥤" },
   { id: "porcoes", label: "Porções", emoji: "🍟" },
   { id: "salgados", label: "Salgados", emoji: "🥟" },
-  { id: "espetinhos", label: "Espetinhos", emoji: "🍢" },
   { id: "bebidas", label: "Bebidas", emoji: "🍻" },
 ];
 

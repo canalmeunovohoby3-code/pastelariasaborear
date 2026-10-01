@@ -17,12 +17,10 @@ import {
   PASTEIS,
   PORCOES,
   SALGADOS,
-  ESPETINHOS,
   SUCOS,
   type Product,
 } from "@/data/menu";
-import logo from "@/assets/menu/logo.png";
-import saborearLogo from "@/assets/saborear-logo.png.asset.json";
+import saborearLogo from "@/assets/saborear-logo.png";
 
 
 export const Route = createFileRoute("/")({
@@ -157,14 +155,6 @@ function MenuPage() {
             </Grid>
           </MenuSection>
 
-          <MenuSection id="espetinhos" title="Espetinhos" subtitle="Empanados à milanesa">
-            <Grid>
-              {ESPETINHOS.map((p) => (
-                <ProductCard key={p.id} product={p} onOpenOptions={openOptions} />
-              ))}
-            </Grid>
-          </MenuSection>
-
           <MenuSection id="bebidas" title="Bebidas" subtitle="Geladas para acompanhar seu pedido">
             <Grid>
               {BEBIDAS.map((p) => (
@@ -223,7 +213,7 @@ function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-center px-4 py-3">
         <img
-          src={saborearLogo.url}
+          src={saborearLogo}
           alt={`Logo ${NOME_PASTELARIA}`}
           className="h-16 w-auto sm:h-20"
         />
@@ -268,7 +258,7 @@ function SiteFooter() {
     <footer className="border-t border-border bg-card">
       <div className="mx-auto max-w-7xl px-4 py-10 text-center">
         <div className="mb-3 flex items-center justify-center">
-          <img src={saborearLogo.url} alt={`Logo ${NOME_PASTELARIA}`} className="h-16 w-auto sm:h-20" />
+          <img src={saborearLogo} alt={`Logo ${NOME_PASTELARIA}`} className="h-16 w-auto sm:h-20" />
         </div>
         <p className="text-sm text-muted-foreground">{FRASE_IMPACTO}</p>
         <p className="mt-4 text-xs text-muted-foreground">

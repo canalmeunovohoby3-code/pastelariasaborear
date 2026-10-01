@@ -21,10 +21,8 @@ import pastelNordestino from "@/assets/menu/pastel-nordestino.jpg";
 import pastelEspecial from "@/assets/menu/pastel-especial.jpg";
 import pastelCarneDeSol from "@/assets/menu/pastel-carnedesol.jpg";
 import pastelArretado from "@/assets/menu/pastel-arretado.jpg";
-import pastelChurrasco from "@/assets/menu/pastel-churrasco.jpg";
 import pastelCamarao from "@/assets/menu/pastel-camarao.jpg";
 import pastelao from "@/assets/menu/pastelao.jpg";
-import pastelEstrogonofe from "@/assets/menu/pastel-estrogonofe.jpg";
 import pastelBurger from "@/assets/menu/pastel-burger.jpg";
 import pastelChocolate from "@/assets/menu/pastel-chocolate.jpg";
 import acai from "@/assets/menu/acai.jpg";
@@ -32,9 +30,6 @@ import acai200 from "@/assets/menu/acai-200.jpg";
 import acai350 from "@/assets/menu/acai-350.jpg";
 import acai500 from "@/assets/menu/acai-500.jpg";
 import sucos from "@/assets/menu/sucos.jpg";
-import porcaoCarneMolho from "@/assets/menu/porcao-carne-molho.jpg";
-import porcaoCarneAipim from "@/assets/menu/porcao-carne-aipim.jpg";
-import porcaoCarneFritas from "@/assets/menu/porcao-carne-fritas.jpg";
 import batataTradicional from "@/assets/menu/batata-tradicional.jpg";
 import batataSaborear from "@/assets/menu/batata-saborear.jpg";
 import bebidaCerveja from "@/assets/menu/bebida-cerveja.jpg";
@@ -79,8 +74,6 @@ import salgadoCoxinhaFrango from "@/assets/menu/salgado-coxinha-frango.jpg";
 import salgadoCoxinhaCostela from "@/assets/menu/salgado-coxinha-costela.jpg";
 import salgadoRisoli from "@/assets/menu/salgado-risoli.jpg";
 import salgadoEnroladinho from "@/assets/menu/salgado-enroladinho.jpg";
-import espetinhoFrango from "@/assets/menu/espetinho-frango.jpg";
-import espetinhoCamarao from "@/assets/menu/espetinho-camarao.jpg";
 
 export type ProductKind = "pastel" | "acai" | "suco" | "porcao" | "bebida" | "salgado" | "espetinho";
 
@@ -153,22 +146,20 @@ export type LocalEntregaId = (typeof LOCAIS_ENTREGA)[number]["id"];
 
 
 export const PASTEIS: Product[] = [
-  { id: "p-frango", name: "Frango", description: "Frango desfiado suculento e bem temperado.", price: 8, image: pastelFrango, kind: "pastel" },
-  { id: "p-frango-queijo", name: "Frango com Queijo", description: "Frango desfiado e queijo mussarela.", price: 8, image: pastelFrangoQueijo, kind: "pastel" },
-  { id: "p-frango-catupiry", name: "Frango com Catupiry", description: "Frango cremoso com catupiry original.", price: 8, image: pastelFrangoCatupiry, kind: "pastel" },
-  { id: "p-frango-cheddar", name: "Frango com Cheddar", description: "Frango desfiado com cheddar cremoso.", price: 8, image: pastelFrangoCheddar, kind: "pastel" },
-  { id: "p-carne", name: "Carne Moída", description: "Carne moída temperada na medida certa.", price: 8, image: pastelCarne, kind: "pastel" },
+  { id: "p-frango", name: "Frango", description: "Frango desfiado suculento e bem temperado.", price: 10, image: pastelFrango, kind: "pastel" },
+  { id: "p-frango-queijo", name: "Frango com Queijo", description: "Frango desfiado e queijo mussarela.", price: 10, image: pastelFrangoQueijo, kind: "pastel" },
+  { id: "p-frango-catupiry", name: "Frango com Catupiry", description: "Frango cremoso com catupiry original.", price: 10, image: pastelFrangoCatupiry, kind: "pastel" },
+  { id: "p-frango-cheddar", name: "Frango com Cheddar", description: "Frango desfiado com cheddar cremoso.", price: 10, image: pastelFrangoCheddar, kind: "pastel" },
+  { id: "p-carne", name: "Carne Moída", description: "Carne moída temperada na medida certa.", price: 10, image: pastelCarne, kind: "pastel" },
   { id: "p-carne-queijo", name: "Carne Moída com Queijo", description: "Carne moída e queijo mussarela.", price: 10, image: pastelCarneQueijo, kind: "pastel" },
-  { id: "p-calabresa", name: "Calabresa com Queijo", description: "Calabresa e queijo mussarela.", price: 8, image: pastelCalabresa, kind: "pastel" },
-  { id: "p-pizza", name: "Pizza", description: "Queijo mussarela, presunto, orégano e milho verde.", price: 8, image: pastelPizza, kind: "pastel" },
-  { id: "p-nordestino", name: "Nordestino", description: "Purê de aipim, carne de sol e queijo mussarela.", price: 13, image: pastelNordestino, kind: "pastel" },
-  { id: "p-especial", name: "Especial", description: "Carne, frango, calabresa, queijo mussarela, milho verde e escolha entre cheddar OU catupiry.", price: 13, image: pastelEspecial, kind: "pastel" },
-  { id: "p-carnedesol", name: "Carne de Sol com Queijo", description: "Carne do sol e queijo mussarela.", price: 13, image: pastelCarneDeSol, kind: "pastel" },
-  { id: "p-arretado", name: "Arretado", description: "Queijo mussarela, carne de sol e banana-da-terra.", price: 13, image: pastelArretado, kind: "pastel" },
-  { id: "p-camarao", name: "Camarão", description: "Bobó de camarão cremoso e queijo mussarela.", price: 15, image: pastelCamarao, kind: "pastel" },
-  { id: "p-pastelao", name: "Pastelão", description: "Pastel gigante com recheio farto de dar água na boca.", price: 15, image: pastelao, kind: "pastel" },
-  { id: "p-estrogonofe", name: "Estrogonofe (Russo)", description: "Estrogonoff de frango, batata palha e queijo mussarela.", price: 13, image: pastelEstrogonofe, kind: "pastel" },
-  { id: "p-churrasco", name: "Churrasco", description: "Carne assada, calabresa e queijo mussarela.", price: 15, image: pastelChurrasco, kind: "pastel" },
+  { id: "p-calabresa", name: "Calabresa com Queijo", description: "Calabresa e queijo mussarela.", price: 10, image: pastelCalabresa, kind: "pastel" },
+  { id: "p-pizza", name: "Pizza", description: "Queijo mussarela, presunto, orégano e milho verde.", price: 10, image: pastelPizza, kind: "pastel" },
+  { id: "p-nordestino", name: "Nordestino", description: "Purê de aipim, carne de sol e queijo mussarela.", price: 15, image: pastelNordestino, kind: "pastel" },
+  { id: "p-especial", name: "Especial", description: "Carne, frango, calabresa, queijo mussarela, milho verde e escolha entre cheddar OU catupiry.", price: 15, image: pastelEspecial, kind: "pastel" },
+  { id: "p-carnedesol", name: "Carne de Sol com Queijo", description: "Carne do sol e queijo mussarela.", price: 15, image: pastelCarneDeSol, kind: "pastel" },
+  { id: "p-arretado", name: "Arretado", description: "Queijo mussarela, carne de sol e banana-da-terra.", price: 15, image: pastelArretado, kind: "pastel" },
+  { id: "p-camarao", name: "Camarão", description: "Bobó de camarão cremoso e queijo mussarela.", price: 20, image: pastelCamarao, kind: "pastel" },
+  { id: "p-pastelao", name: "Pastelão", description: "Pastel gigante com recheio farto de dar água na boca.", price: 20, image: pastelao, kind: "pastel" },
   { id: "p-burger", name: "Burger", description: "Pastel recheado com carne de hambúrguer artesanal e queijo mussarela.", price: 15, image: pastelBurger, kind: "pastel" },
   { id: "p-chocolate", name: "Chocolate", description: "Pastel doce recheado com chocolate ao leite.", price: 10, image: pastelChocolate, kind: "pastel" },
 ];
@@ -192,9 +183,6 @@ export const SUCOS: Product = {
 };
 
 export const PORCOES: Product[] = [
-  { id: "por-carne-molho", name: "Carne com Molho de Queijo", description: "Carne de sol coberta com cremoso molho de queijo.", price: 50, image: porcaoCarneMolho, kind: "porcao" },
-  { id: "por-carne-aipim", name: "Carne de Sol com Aipim", description: "Carne de sol acompanhada de aipim frito.", price: 50, image: porcaoCarneAipim, kind: "porcao" },
-  { id: "por-carne-fritas", name: "Carne de Sol com Fritas", description: "Carne de sol com batata frita crocante. Acompanha salada e farofa.", price: 50, image: porcaoCarneFritas, kind: "porcao" },
   { id: "por-batata", name: "Batata Frita Tradicional", description: "Porção generosa de batata frita crocante — 300 gramas de batata.", price: 18, image: batataTradicional, kind: "porcao" },
   { id: "por-batata-saborear", name: "Batata Saborear", description: "Batata frita com cheddar, bacon e cebolinha.", price: 18, image: batataSaborear, kind: "porcao" },
 ];
@@ -206,10 +194,6 @@ export const SALGADOS: Product[] = [
   { id: "s-enroladinho", name: "Enroladinho de Salsicha", description: "Enroladinho crocante de salsicha.", price: 6, image: salgadoEnroladinho, kind: "salgado" },
 ];
 
-export const ESPETINHOS: Product[] = [
-  { id: "e-frango", name: "Espetinho de Frango à Milanesa", description: "Espetinho de frango empanado à milanesa.", price: 8, image: espetinhoFrango, kind: "espetinho" },
-  { id: "e-camarao", name: "Espetinho de Camarão à Milanesa", description: "Espetinho de camarão empanado à milanesa.", price: 10, image: espetinhoCamarao, kind: "espetinho" },
-];
 
 
 
@@ -234,18 +218,18 @@ export const BEBIDAS: Product[] = [
   { id: "b-ice", name: "Ice", description: "Bebida Ice gelada.", price: 10, image: bebidaSmirnoffIce, kind: "bebida" },
   { id: "b-cabare", name: "Cabaré", description: "Drink Cabaré.", price: 10, image: bebidaCabareIce, kind: "bebida" },
   // Refrigerantes e Sucos
-  { id: "b-coca-lata", name: "Coca-Cola Lata 350 ml", description: "Coca-Cola lata 350 ml.", price: 5, image: bebidaCocaLata, kind: "bebida" },
+  { id: "b-coca-lata", name: "Coca-Cola Lata 350 ml", description: "Coca-Cola lata 350 ml.", price: 6, image: bebidaCocaLata, kind: "bebida" },
   { id: "b-coca-zero-lata", name: "Coca-Cola Zero Lata 350 ml", description: "Coca-Cola Zero lata 350 ml.", price: 5, image: bebidaCocaZero, kind: "bebida" },
-  { id: "b-pepsi-lata", name: "Pepsi Lata 350 ml", description: "Pepsi lata 350 ml.", price: 5, image: bebidaPepsiLata, kind: "bebida" },
+  { id: "b-pepsi-lata", name: "Pepsi Lata 350 ml", description: "Pepsi lata 350 ml.", price: 6, image: bebidaPepsiLata, kind: "bebida" },
   { id: "b-kuat", name: "Guaraná Kuat Lata", description: "Guaraná Kuat lata.", price: 5, image: bebidaKuat, kind: "bebida" },
   { id: "b-fanta-lata", name: "Fanta Lata (Laranja ou Uva)", description: "Fanta lata laranja ou uva.", price: 5, image: bebidaFantaLata, kind: "bebida" },
   { id: "b-tubaina", name: "Tubaína", description: "Refrigerante Tubaína.", price: 6, image: bebidaTubaina, kind: "bebida" },
-  { id: "b-coca-1l", name: "Coca-Cola 1 Litro", description: "Coca-Cola 1 litro.", price: 8, image: bebidaCoca1l, kind: "bebida" },
-  { id: "b-coca-zero-1l", name: "Coca-Cola Zero 1 Litro", description: "Coca-Cola Zero 1 litro.", price: 8, image: bebidaCocaZero1l, kind: "bebida" },
-  { id: "b-guarana-1l", name: "Guaraná 1 Litro", description: "Guaraná 1 litro.", price: 8, image: bebidaGuarana1l, kind: "bebida" },
-  { id: "b-guarana-jesus-1l", name: "Guaraná Jesus 1 Litro", description: "Guaraná Jesus 1 litro.", price: 8, image: bebidaGuaranaJesus1l, kind: "bebida" },
-  { id: "b-fanta-1l", name: "Fanta 1 Litro", description: "Fanta 1 litro.", price: 8, image: bebidaFanta1l, kind: "bebida" },
-  { id: "b-soda-1l", name: "Soda Limonada 1 Litro", description: "Soda Limonada 1 litro.", price: 8, image: bebidaSoda1l, kind: "bebida" },
+  { id: "b-coca-1l", name: "Coca-Cola 1 Litro", description: "Coca-Cola 1 litro.", price: 10, image: bebidaCoca1l, kind: "bebida" },
+  { id: "b-coca-zero-1l", name: "Coca-Cola Zero 1 Litro", description: "Coca-Cola Zero 1 litro.", price: 10, image: bebidaCocaZero1l, kind: "bebida" },
+  { id: "b-guarana-1l", name: "Guaraná 1 Litro", description: "Guaraná 1 litro.", price: 10, image: bebidaGuarana1l, kind: "bebida" },
+  { id: "b-guarana-jesus-1l", name: "Guaraná Jesus 1 Litro", description: "Guaraná Jesus 1 litro.", price: 10, image: bebidaGuaranaJesus1l, kind: "bebida" },
+  { id: "b-fanta-1l", name: "Fanta 1 Litro", description: "Fanta 1 litro.", price: 10, image: bebidaFanta1l, kind: "bebida" },
+  { id: "b-soda-1l", name: "Soda Limonada 1 Litro", description: "Soda Limonada 1 litro.", price: 10, image: bebidaSoda1l, kind: "bebida" },
   { id: "b-skinka", name: "Suco Skinka (Laranja, Uva ou Morango)", description: "Suco Skinka laranja, uva ou morango.", price: 5, image: bebidaSkinka, kind: "bebida" },
   // Águas
   { id: "b-agua-sg", name: "Água sem gás", description: "Água mineral sem gás.", price: 3, image: bebidaAguaSg, kind: "bebida" },
